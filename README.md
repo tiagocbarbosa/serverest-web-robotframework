@@ -12,18 +12,18 @@ This application is a test automation of the website [ServeRest](https://front.s
 
 ## How to use
 
-To use this project, clone it on your machine and open it on your favorite IDE.
+To use this automation, clone the project on your machine and open it on your favorite IDE.
 
-In the `/tests/` dir you will find all the test cases of the web application; in `/pages` you will find the implementation of the keywords defined.
+The tests cases of the web application are located in the `tests/` dir, and the keywords definitions are in the `pages/`.
 
-To execute the automation, run the `robot -d results/ tests/` command. The option `-d results/` saves the evidences in the `results/` dir; the `tests/` option runs the test cases from the `tests/` dir.
+To execute the automation, you can run the `robot -d results/ tests/` command. The option `-d results/` saves the evidences in the `results/` dir; the `tests/` option runs the test cases from the `tests/` dir.
 
 Other commands:
 
-- `robot -d results/ tests/login_test.robot` -> run all the tests cases defined in the `login_test.robot` file;
-- `robot -d results/ -i regression tests/` -> run all the test cases defined with the `regression` tag.
+- `robot -d results/ tests/login_test.robot` -> run the tests cases defined in the `login_test.robot` file;
+- `robot -d results/ -i regression tests/` -> run the test cases defined with the `regression` tag.
 
-After the automation execution, you can check the tests status on the `report.html` file that will be created in the `results/` dir.
+After you execute the automation, you can check the result of the tests on the `report.html` file that will be created in the `results/` dir.
 
 ### TO DOs:
 - cadastrar uma conta e logar com sucessso (done)
