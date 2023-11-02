@@ -2,6 +2,8 @@
 
 Library     SeleniumLibrary
 
+Resource    ../resources/properties.resource
+
 *** Variables ***
 
 ${REGISTER_PAGE_URL}     https://front.serverest.dev/cadastrarusuarios
@@ -17,17 +19,18 @@ ${PASSWORD_INPUT}  data:testid:password
 
 When I register a new account
     Click Element   ${REGISTER_BUTTON}
-    Capture Page Screenshot
-    Location Should Be  ${REGISTER_PAGE_URL}
     Wait Until Element Contains     tag:h2  Cadastro
+    Location Should Be  ${REGISTER_PAGE_URL}
+    Capture Page Screenshot
 
-    Input Text  ${NAME_INPUT}   teste4
-    Input Text  ${EMAIL_INPUT}   teste4@email.com
-    Input Text  ${PASSWORD_INPUT}   1234
+    Input Text  ${NAME_INPUT}   teste
+    Input Text  ${EMAIL_INPUT}   ${EMAIL}
+    Input Text  ${PASSWORD_INPUT}   ${PASSWORD}
     Capture Page Screenshot
     Click Element   ${REGISTER_BUTTON}
 
 Then I am redirected to the home page
     Wait Until Element Contains     tag:h1  Serverest Store
-    Capture Page Screenshot
+    Wait Until Element Contains     tag:h4  Produtos
     Location Should Be  ${HOME_PAGE_URL}
+    Capture Page Screenshot

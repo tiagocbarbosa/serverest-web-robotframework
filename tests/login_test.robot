@@ -8,7 +8,7 @@ Test Teardown   Close the browser
 
 *** Test Cases ***
 
-Login a new registered account succesfuly
+Login succesfuly a new registered account
     Given the ServerRest website
     When I register a new account
     Then I am redirected to the home page
